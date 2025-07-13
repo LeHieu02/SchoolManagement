@@ -24,6 +24,10 @@
                             <field name = "birthday"/>
                             <field name = "class_id"/>
                         </group>
+                        <group>
+                            <field name = "subject_list" widget = "many2many_checkboxes" string = "Các môn học đăng ký">
+                            </field>
+                        </group>
                     </sheet>
                 </form>
             </field>

@@ -26,4 +26,21 @@
                   sequence = "2"
                   action = "student_information_action"
     />
+    <menuitem id = "student_information_menu"
+                  name = "Student Information"
+                  parent = "school_menu_root"
+                  sequence = "2"
+    />
+    <menuitem id = "student_information_submenu"
+                  name = "Student Information"
+                  parent = "student_information_menu"
+                  sequence = "2"
+                  action = "student_information_action"
+    />
+    <menuitem id = "subject_information_menu"
+                  name = "Subject Information"
+                  parent = "student_information_menu"
+                  sequence = "2"
+                  action = "subject_information_action"
+    />
 </odoo>

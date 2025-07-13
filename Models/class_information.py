@@ -11,6 +11,7 @@ class ClassInformation(models.Model):
     mainTeacher = fields.Char(string = "GVCN")
     school_id = fields.Many2one ("school.information" , string = "Trường")
     student_list = fields.One2many("student.information","class_id",string = "Danh sách học sinh")
+    address = fields.Text(related = "school_id.address", string = "Địa chỉ")
 
 class SchoolInformation(models.Model):
     _inherit = "school.information"

@@ -12,7 +12,8 @@
         "view/menu_item.xml",
         "view/school_information.xml",
         "view/class_information.xml",
-        "view/student_information.xml"
+        "view/student_information.xml",
+        "view/subject_information.xml"
     ],
     'installable': True,
     'application': True,
