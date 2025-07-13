@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id = "class_information_tree_view" model = "ir.ui.view">
+            <field name = "name"> Class Information Tree</field>
+            <field name = "model">class.information</field>
+            <field name = "arch" type = "xml">
+                <tree string = "Danh sách lớp">
+                    <field name = "name" optional = "show"/>
+                    <field name = "grade" optional = "show"/>
+                    <field name = "mainTeacher" optional = "show"/>
+                    <field name = "school_id" optional = "show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id = "class_information_form_view" model = "ir.ui.view">
+            <field name = "name">Class Information Form</field>
+            <field name = "model">class.information</field>
+            <field name = "arch" type = "xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name = "name"/>
+                            <field name = "grade" />
+                            <field name = "mainTeacher"/>
+                            <field name = "school_id"/>
+                        </group>
+                        <group>
+                            <field name = "student_list">
+                                <tree name = "Danh sách học sinh">
+                                    <field name = "name"/>
+                                    <field name = "birthday"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id = "class_information_action" model = "ir.actions.act_window">
+            <field name = "name">Class Information</field>
+            <field name = "res_model">class.information</field>
+            <field name = "view_mode">tree,form</field>
+            <field name = "help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                No classes found yet.<br/>
+                <strong>Click "Create" to add the first class.</strong>
+            </p>
+            </field>
+        </record>
+    </data>
+</odoo>

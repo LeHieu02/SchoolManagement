@@ -1,0 +1,29 @@
+<odoo>
+    <menuitem id = "school_menu_root"
+              name = "School"
+
+    />
+    <menuitem id = "school_menu"
+              name = "School Information"
+              parent = "school_menu_root"
+              sequence = "2"
+    />
+    <menuitem id = "school_submenu"
+              name = "School Information"
+              parent = "school_menu"
+              action = "school_information_action"
+              sequence = "2"
+    />
+    <menuitem id = "class_information_menu"
+                  name = "Class Information"
+                  parent = "school_menu_root"
+                  sequence = "2"
+                  action = "class_information_action"
+    />
+    <menuitem id = "student_information_menu"
+                  name = "Student Information"
+                  parent = "school_menu_root"
+                  sequence = "2"
+                  action = "student_information_action"
+    />
+</odoo>

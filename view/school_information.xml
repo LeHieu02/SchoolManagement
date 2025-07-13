@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+    <record id="school_information_form_view" model = "ir.ui.view">
+        <field name = "name">School Information Form</field>
+        <field name = "model">school.information</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name = "name" />
+                        <field name = "type" />
+                        <field name = "email" />
+                        <field name = "address" />
+                        <field name = "hasOnlineClass"/>
+                    </group>
+                    <group>
+                        <field name = "document" filename = "document_name"/>
+                        <field name = "document_name"/>
+                    </group>
+                    <group>
+                        <field name = "class_list">
+                            <tree string="Danh sách lớp">
+                                <field name = "name"/>
+                                <field name = "grade" />
+                                <field name = "mainTeacher"/>
+                            </tree>
+
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+
+    </record>
+
+    <record id = "school_information_tree_view" model = "ir.ui.view">
+        <field name = "name">School Information Tree</field>
+        <field name = "model">school.information</field>
+        <field name = "arch" type = "xml">
+            <tree string = "Danh sách trường">
+                <field name="name" optional = "show"/>
+                <field name = "type" optional = "show"/>
+                <field name = "email" optional = "show"/>
+                <field name = "address" optional = "show"/>
+                <field name = "hasOnlineClass" optional = "show"/>
+            </tree>
+        </field>
+
+    </record>
+
+    <record id = "school_information_action" model = "ir.actions.act_window">
+        <field name = "name">School Information Action</field>
+        <field name = "type">ir.actions.act_window</field>
+        <field name = "res_model">school.information</field>
+        <field name = "view_mode">tree,form</field>
+        <field name = "help" type = "html">
+            <p class="o_view_nocontent_smiling_face">
+                No schools found yet.<br/>
+                <strong>Click "Create" to add the first school.</strong>
+            </p>
+        </field>
+
+    </record>
+    </data>
+</odoo>
