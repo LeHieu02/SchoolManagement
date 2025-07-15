@@ -28,6 +28,14 @@
                             <field name = "subject_list" widget = "many2many_checkboxes" string = "Các môn học đăng ký">
                             </field>
                         </group>
+                        <group>
+                        <group>
+                            <field name = "student_fee" />
+                        </group>
+                        <group>
+                            <field name = "currency_id" />
+                        </group>
+                        </group>
                     </sheet>
                 </form>
             </field>

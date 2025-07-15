@@ -15,6 +15,14 @@
                         <field name = "hasOnlineClass"/>
                     </group>
                     <group>
+                        <group>
+                            <field name = "school_fee" />
+                        </group>
+                        <group>
+                            <field name = "currency_school_id" />
+                        </group>
+                    </group>
+                    <group>
                         <field name = "document" filename = "document_name"/>
                         <field name = "document_name"/>
                     </group>
@@ -44,6 +52,7 @@
                 <field name = "type" optional = "show"/>
                 <field name = "email" optional = "show"/>
                 <field name = "address" optional = "show"/>
+                <field name = "school_fee" optional = "show"/>
                 <field name = "hasOnlineClass" optional = "show"/>
             </tree>
         </field>

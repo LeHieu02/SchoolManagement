@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <odoo>
+        <record id="view_form_student_semester_score" model="ir.ui.view">
+        <field name="name">student.semester.score.form</field>
+        <field name="model">student.semester.score</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="semester_id"/>
+                        <field name="average_score" readonly="1"/>
+                        <field name="ranking" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Chi tiết điểm các môn học">
+                            <field name="score_list">
+                                <tree editable="bottom" class="my-score-table">
+                                    <field name="subject_id"/>
+                                    <field name="score"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_tree_student_semester_score" model="ir.ui.view">
+        <field name="name">student.semester.score.tree</field>
+        <field name="model">student.semester.score</field>
+        <field name="arch" type="xml">
+            <tree class="my-score-table">
+                <field name="student_id"/>
+                <field name="semester_id"/>
+                <field name="average_score"/>
+                <field name="ranking" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_student_semester_score" model="ir.actions.act_window">
+        <field name="name">Bảng điểm học sinh</field>
+        <field name="res_model">student.semester.score</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

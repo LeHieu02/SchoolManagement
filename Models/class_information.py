@@ -8,7 +8,8 @@ class ClassInformation(models.Model):
 
     name = fields.Char (string = "Tên lớp")
     grade = fields.Char(string = "Khối")
-    mainTeacher = fields.Char(string = "GVCN")
+    # mainTeacher = fields.Char(string = "GVCN")
+    mainTeacher = fields.Many2one("teacher.information",string="GVCN")
     school_id = fields.Many2one ("school.information" , string = "Trường")
     student_list = fields.One2many("student.information","class_id",string = "Danh sách học sinh")
     address = fields.Text(related = "school_id.address", string = "Địa chỉ")

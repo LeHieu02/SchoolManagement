@@ -4,3 +4,9 @@ access_school_information,school.information,model_school_information,,1,1,1,1
 access_student_information,student.information,model_student_information,,1,1,1,1
 access_class_information,class.information,model_class_information,,1,1,1,1
 access_subject_information,subject.information,model_subject_information,,1,1,1,1
+access_teacher_information,teacher.information,model_teacher_information,,1,1,1,1
+access_score_information,score.information,model_score_information,,1,1,1,1
+access_academic_year,academic.year,model_academic_year,,1,1,1,1
+access_academic_semester,academic.semester,model_academic_semester,,1,1,1,1
+access_student_semester_score,student.semester.score,model_student_semester_score,,1,1,1,1
+

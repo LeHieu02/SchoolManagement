@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_form_academic_year" model="ir.ui.view">
+    <field name="name">academic.year.form</field>
+    <field name="model">academic.year</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+                <notebook>
+                    <page string="Danh sách học kỳ">
+                        <field name="semester_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+    </record>
+
+    <record id="view_tree_academic_year" model="ir.ui.view">
+        <field name="name">academic.year.tree</field>
+        <field name="model">academic.year</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_academic_year" model="ir.actions.act_window">
+        <field name="name">Năm học</field>
+        <field name="res_model">academic.year</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_form_academic_semester" model="ir.ui.view">
+    <field name="name">academic.semester.form</field>
+    <field name="model">academic.semester</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="year_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+                <field name="score_ids">
+                    <tree editable="bottom">
+                        <field name="student_id"/>
+                        <field name="average_score"/>
+                        <field name="ranking"/>
+                    </tree>
+                </field>
+            </sheet>
+        </form>
+    </field>
+    </record>
+
+    <record id="view_tree_academic_semester" model="ir.ui.view">
+        <field name="name">academic.semester.tree</field>
+        <field name="model">academic.semester</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="year_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_academic_semester" model="ir.actions.act_window">
+        <field name="name">Học kỳ</field>
+        <field name="res_model">academic.semester</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,9 @@
+.my-score-table .o_list_table thead th {
+    background-color: #2C3E50 !important;
+    color: #fff !important;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid #1A252F;
+}
+

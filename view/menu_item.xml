@@ -1,4 +1,5 @@
 <odoo>
+<!--    view school-->
     <menuitem id = "school_menu_root"
               name = "School"
 
@@ -14,12 +15,16 @@
               action = "school_information_action"
               sequence = "2"
     />
+
+<!--    view class-->
     <menuitem id = "class_information_menu"
                   name = "Class Information"
                   parent = "school_menu_root"
                   sequence = "2"
                   action = "class_information_action"
     />
+
+<!--    view student-->
     <menuitem id = "student_information_menu"
                   name = "Student Information"
                   parent = "school_menu_root"
@@ -37,10 +42,26 @@
                   sequence = "2"
                   action = "student_information_action"
     />
+<!--    view subject-->
     <menuitem id = "subject_information_menu"
                   name = "Subject Information"
                   parent = "student_information_menu"
                   sequence = "2"
                   action = "subject_information_action"
     />
+
+<!--    view teacher-->
+    <menuitem id = "teacher_information_menu"
+                  name = "Teacher Information"
+                  parent = "school_menu_root"
+                  sequence = "2"
+                  action = "teacher_information_action"
+    />
+
+<!--    view academic-->
+    <menuitem id="menu_score_root" sequence = "2" parent = "school_menu_root" name="Score"/>
+    <menuitem id="menu_year" name="Năm học" parent="menu_score_root" action="action_academic_year"/>
+    <menuitem id="menu_semester" name="Học kỳ" parent="menu_score_root" action="action_academic_semester"/>
+    <menuitem id="menu_student_semester_score" name="Bảng điểm học sinh" parent="menu_score_root" action="action_student_semester_score"/>
+
 </odoo>
